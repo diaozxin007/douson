@@ -5,7 +5,7 @@ import java.io.Reader;
 
 public class CharReader {
 
-	private static final int BUFFER_SIZE = 1024;
+	private static final int BUFFER_SIZE = 1024 ;
 
 	private Reader reader;
 
@@ -41,7 +41,6 @@ public class CharReader {
 		if (!hasMore()) {
 			return (char) -1;
 		}
-
 		return buffer[pos++];
 	}
 
@@ -66,6 +65,10 @@ public class CharReader {
 
 		pos = 0;
 		size = n;
+	}
+
+	public int getPos(){
+		return pos;
 	}
 
 }
